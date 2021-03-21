@@ -4,9 +4,39 @@
 	<meta charset="utf-8">
 		<title>HTML</title>
 	</head>
+
+    <script>
+        var arr= ['비트코인',
+        '리플',
+        '이더리움',
+        '트론',
+        '에이다',
+        '이오스',
+        '비트코인 캐시',
+        '스텔라루멘',
+        '라이트코인',
+        '비트코인 에스브이',
+        '체인링크'];
+
+
+        function changeBtnName()  {
+            var jbRandom = Math.random();
+            var btntxt = arr[ Math.floor( jbRandom * 10 ) ];
+            const btnElement = document.getElementById('btn');
+            btnElement.innerText = btntxt;
+        }
+
+    </script>
+
+
 	<body>
 		<h1>랜덤코인추천기 V0</h1>
 		<h2>Random Coin Recommender V0</h2>
 
+        <button 
+            id='btn' 
+            onclick='changeBtnName()'> 
+            랜덤코인
+        </button>
 	</body>
 </html>
